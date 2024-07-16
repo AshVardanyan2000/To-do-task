@@ -1,0 +1,150 @@
+body {
+  overflow: hidden;
+
+  &, & * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+textarea,
+input {
+  border-radius: 8px;
+  border: 1px solid #0D0D0D;
+  background: #262626;
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 16px;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFF;
+  z-index: 1;
+  transition: border-color 100ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+
+  &:focus {
+    border: 1px solid #4EA8DE;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &::placeholder {
+    color: #808080;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+  font-size: 14px;
+  line-height: 20px;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: #C8C7CC;
+    border: 1px solid white;
+    margin: 5px 0;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #4EA8DE;
+    border-radius: 3px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #A5A5A5;
+    cursor: pointer;
+  }
+}
+
+.react-datepicker-popper {
+  z-index: 2;
+}
+
+.react-datepicker-wrapper {
+  input {
+    border: 1px solid #A5A5A5;
+
+  }
+}
+
+.react-datepicker__triangle {
+  display: none;
+}
+
+.react-datepicker {
+  font-family: Arial, sans-serif;
+  background-color: #2b2b2b;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.react-datepicker__header {
+  background-color: #2b2b2b;
+  border-bottom: none;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: #fff;
+}
+
+.react-datepicker__day {
+  color: #fff;
+}
+
+.react-datepicker__day--selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.react-datepicker__day:hover {
+  background-color: #5a5a5a;
+}
+
+.react-datepicker__day--outside-month {
+  color: #5a5a5a;
+}
+
+.react-datepicker__navigation {
+  top: 10px;
+}
+
+.react-datepicker__day--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.pending {
+  color: #4EA8DE !important;
+}
+
+.completed {
+  color: #00933A  !important;
+}
+
+.overdue {
+  color: #7000FF  !important;
+}
+
+.removed {
+  color: #EB0000  !important;
+}
