@@ -1,4 +1,4 @@
-import React, {FC, forwardRef, useEffect, useState,} from 'react';
+import React, {FC, forwardRef, useMemo, useState,} from 'react';
 import Modal from './Modal';
 import Button from '../Buttons/Button';
 import classes from './style.module.scss';
@@ -54,13 +54,13 @@ const AddOrEditTaskModal: FC<IAddOrEditTaskModal> = ({open, close, defaultValue}
         defaultValues: defaultValue,
     });
 
-    useEffect(() => {
+    useMemo(() => {
         if (open) {
             if (defaultValue.date) setShowDate(true)
 
             reset(defaultValue);
         }
-    }, [defaultValue]);
+    }, [defaultValue,open]);
 
     const onCloseModal = () => {
         setShowDate(false)
